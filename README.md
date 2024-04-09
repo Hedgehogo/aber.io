@@ -16,23 +16,9 @@ Example:
 // At the beginning of the line
 ```
 
-## Function call
-Any non-zero character set other than whitespace and `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` are considered function calls. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`.
-
-Examples:
-```
-foo
-```
-```
-foo+bar
-```
-```
-baz0-foo*$%
-```
-
 ## Literals
 ### Numbers
-Digits (0-9) and capital letters of the English alphabet (A-Z) can be used, if they exist in the required number system. `_` can be used as a separator between digits. The default numbering system is decimal. 
+Digits (0-9) and capital letters of the English alphabet (A-Z) can be used, if they exist in the required number system. `_` can be used as a separator between digits. Signed numbers can begin with `-`. The default numbering system is decimal. 
 
 **Integer numbers**
 
@@ -63,17 +49,17 @@ The functional further works for any numbers.
 Before the number is written the number system in decimal notation, and then it is written `'`.
 
 Examples:
+```rs
+16'FF // Hexadecimal, integer, 255 in decimal
 ```
-16'FF # Hexadecimal, integer, 255 in decimal
+```rs
+2'01100101 // Binary, integer, 101 in decimal
 ```
+```rs
+3'0.1 // Trinary, real, 1/3 in decimal
 ```
-2'01100101 # Binary, integer, 101 in decimal
-```
-```
-3'0.1 # Trinary, real, 1/3 in decimal
-```
-```
-2'10. # Binary, real, 2 in decimal
+```rs
+2'10. // Binary, real, 2 in decimal
 ```
 
 **Scientific notation.**
@@ -81,10 +67,23 @@ Examples:
 A number can be followed by an `e` followed by a full *integer number* (can be written in different number systems, etc.). This number is an exponent.
 
 Examples:
+```rs
+1e16'F // 1 * (10^15) in decimal
 ```
-1e16'F # 1 * (10^15) in decimal
-```
-```
-9.109_383_56e−31 # 9.10938356 * (10^−31) in decimal
+```rs
+9.109_383_56e−31 // 9.10938356 * (10^−31) in decimal
 ```
 
+## Function call
+Any non-zero character set other than whitespace and `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` are considered function calls. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or with the same character set preceded by `-`.
+
+Examples:
+```
+foo
+```
+```
+foo+bar
+```
+```
+baz0-foo*$%
+```
