@@ -165,8 +165,8 @@ Examples:
 [5, Type]
 ```
 
-## Function call
-Any non-zero character set that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `/`, `(`, `)`, `{`, `}`, `[`, `]` is considered a function call.
+## Сall
+Any non-zero character set that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `/`, `(`, `)`, `{`, `}`, `[`, `]` is considered a call.
 
 Examples:
 ```
@@ -180,7 +180,7 @@ baz0-foo*$%
 ```
 
 ## Method call
-A method call is indicated by `.` followed by a function call. It captures the largest expression on the left.
+A method call is indicated by `.` followed by a call. It captures the largest expression on the left.
 
 Examples:
 ```
@@ -193,8 +193,8 @@ bar 10.foo+bar
 baz(10, "hello").baz0-foo*$%
 ```
 
-## Сhild function call
-A сhild function call is indicated by `::` followed by a function call. It captures the largest expression on the left.
+## Сhild сall
+A сhild call is indicated by `::` followed by a call. It captures the largest expression on the left.
 
 Examples:
 ```
@@ -207,8 +207,8 @@ bar 10::foo+bar
 baz(10, "hello")::baz0-foo*$%
 ```
 
-## Negative function call
-The negative function call is denoted by `@`. It captures the largest expression on the right. It has higher precedence than a method call or a child function call.
+## Negative call
+The negative call is denoted by `@`. It captures the largest expression on the right. It has higher precedence than a method call or a child call.
 
 Examples:
 ```
@@ -222,7 +222,7 @@ Examples:
 ```
 
 ## Assignment
-The assignment is denoted by `=`. It captures the largest expression to the right and left. It has higher priority than a method call, a child function call, or a negative function call.
+The assignment is denoted by `=`. It captures the largest expression to the right and left. It has higher priority than a method call, a child call, or a negative call.
 
 Examples:
 ```
