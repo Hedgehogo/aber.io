@@ -92,6 +92,57 @@ Examples:
 
 **Raw string**
 
+## Tuple
+Tuples start with `(` and end with `)`, elements within are separated by `,`. A comma before a closing bracket is optional.
+
+Examples:
+```rs
+() 
+```
+```rs
+(10)
+```
+```rs
+(42, )
+```
+```rs
+(5, "hello")
+```
+
+## Block
+Blocks start with `{` and end with `}`, expressions within are separated by `;`. A semicolon before a closing bracket creates an empty expression at the end of the block.
+
+Examples:
+```rs
+{}
+```
+```rs
+{10}
+```
+```rs
+{42; }
+```
+```rs
+{5; "hello"}
+```
+
+## Explicit generic parameters
+Explicit generic parameters start with `[` and end with `]`, parameters within are separated by `,`. A comma before a closing bracket is optional.
+
+Examples:
+```rs
+[]
+```
+```rs
+[10]
+```
+```rs
+[42, ]
+```
+```rs
+[5, Type]
+```
+
 ## Function call
 Any non-zero character set other than whitespace and `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` are considered function calls. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or from any character in this set preceded by `-`.
 
