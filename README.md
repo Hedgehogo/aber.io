@@ -90,6 +90,8 @@ Examples:
 \n\"IEML\"!" // Same as the first one
 ```
 
+**Raw string**
+
 ## Function call
 Any non-zero character set other than whitespace and `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` are considered function calls. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or from any character in this set preceded by `-`.
 
