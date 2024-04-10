@@ -93,7 +93,7 @@ Examples:
 **Raw string**
 
 ## Pair
-The pair is denoted by `:`.
+The pair is denoted by `:`. It captures the smallest syntactic unit in front of it.
 
 Example:
 ```rs
@@ -166,7 +166,7 @@ baz0-foo*$%
 ```
 
 ## Method call
-A method call is indicated by `.` followed by a function call.
+A method call is indicated by `.` followed by a function call. It captures the largest set of syntactic units in front of it.
 
 Examples:
 ```
@@ -180,7 +180,7 @@ Examples:
 ```
 
 ## Сhild function call
-A сhild function call is indicated by `::` followed by a function call.
+A сhild function call is indicated by `::` followed by a function call. It captures the largest set of syntactic units in front of it.
 
 Examples:
 ```
