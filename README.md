@@ -189,7 +189,7 @@ foo.foo
 bar 10.foo+bar
 ```
 ```
-bar(10, "hello").baz0-foo*$%
+baz(10, "hello").baz0-foo*$%
 ```
 
 ## Сhild function call
@@ -203,5 +203,5 @@ foo::foo
 bar 10::foo+bar
 ```
 ```
-bar(10, "hello")::baz0-foo*$%
+baz(10, "hello")::baz0-foo*$%
 ```
