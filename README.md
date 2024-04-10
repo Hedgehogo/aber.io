@@ -92,6 +92,14 @@ Examples:
 
 **Raw string**
 
+## Pair
+The pair is denoted by `:`.
+
+Example:
+```rs
+"count": 10
+```
+
 ## Tuple
 Tuples start with `(` and end with `)`, elements within are separated by `,`. A comma before a closing bracket is optional.
 
@@ -155,4 +163,32 @@ foo+bar
 ```
 ```
 baz0-foo*$%
+```
+
+## Method call
+A method call is indicated by `.` followed by a function call.
+
+Examples:
+```
+.foo
+```
+```
+.foo+bar
+```
+```
+.baz0-foo*$%
+```
+
+## Сhild function call
+A сhild function call is indicated by `::` followed by a function call.
+
+Examples:
+```
+::foo
+```
+```
+::foo+bar
+```
+```
+::baz0-foo*$%
 ```
