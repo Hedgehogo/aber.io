@@ -166,7 +166,7 @@ Examples:
 ```
 
 ## Function call
-Any non-zero character set not including `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` is considered a function call. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or from any character in this set preceded by `-`.
+Any non-zero character set that does not start with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or `-` with one of the characters in that set and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` is considered a function call.
 
 Examples:
 ```
