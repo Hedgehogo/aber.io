@@ -206,3 +206,17 @@ bar 10::foo+bar
 ```
 baz(10, "hello")::baz0-foo*$%
 ```
+
+## Assignment
+The assignment is denoted by `=`. It captures the right and left most expression. It has a lower priority than method calls and child function calls
+
+Examples:
+```
+a = foo
+```
+```
+a = foo.foo
+```
+```
+a = foo::foo
+```
