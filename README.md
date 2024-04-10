@@ -78,15 +78,15 @@ It is written in `"`. Characters are escaped with `\`. The characters supported 
 Any characters are allowed, except `"` without `\` before it, including ↵ (Newline).
 
 Examples:
-```rs
+```kotlin
 "Hello\t\n\"Aber\"!" // Hello	
                      // "Aber"!
 ```
-```rs
+```kotlin
 "Hello\t
 \"Aber\"!" // Same as the first one
 ```
-```rs
+```kotlin
 "Hello\t\
 \n\"Aber\"!" // Same as the first one
 ```
@@ -95,14 +95,14 @@ Examples:
 Starts with a non-zero n number of `"` characters and a `#` character at the end. ends with `#` and n `"` characters.
 
 Examples:
-```
+```dart
 "#Hello	
 "Aber"!#" // Same as in normal strings
 ```
-```
+```kotlin
 """#	""Aber#""" // "\t\"\"Aber"
 ```
-```
+```kotlin
  """Aber"""  // "" "Aber" ""
 """#Aber#""" // "Aber"
 ```
