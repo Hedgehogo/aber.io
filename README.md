@@ -78,7 +78,8 @@ Any characters are allowed, except `"` without `\` before it, including ↵ (New
 
 Examples:
 ```rs
-"Hello\t\n\"IEML\"!" // Hello{Newline}"IEML"!
+"Hello\t\n\"IEML\"!" // Hello
+                     // "IEML"!
 ```
 ```rs
 "Hello\t
