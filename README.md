@@ -212,13 +212,13 @@ The negative function call is denoted by `@`. It captures the largest expression
 
 Examples:
 ```
-a = foo
+@foo
 ```
 ```
-a = foo.foo
+@foo.foo
 ```
 ```
-a = foo::foo
+@foo::foo
 ```
 
 ## Assignment
@@ -232,5 +232,5 @@ a = foo
 a = foo.foo
 ```
 ```
-a = foo::foo
+@bar = foo::foo
 ```
