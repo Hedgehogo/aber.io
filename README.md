@@ -181,7 +181,7 @@ Examples:
 ```
 
 ## Сall
-Any non-zero character set that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `/`, `(`, `)`, `{`, `}`, `[`, `]` and whitespace is considered a call.
+Any non-zero character set, that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `/`, `(`, `)`, `{`, `}`, `[`, `]` and whitespace, is considered a call.
 
 Examples:
 ```
