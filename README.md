@@ -170,13 +170,13 @@ A method call is indicated by `.` followed by a function call. It captures the l
 
 Examples:
 ```
-.foo
+foo.foo
 ```
 ```
-.foo+bar
+bar 10.foo+bar
 ```
 ```
-.baz0-foo*$%
+bar(10, "hello").baz0-foo*$%
 ```
 
 ## Сhild function call
@@ -184,11 +184,11 @@ A сhild function call is indicated by `::` followed by a function call. It capt
 
 Examples:
 ```
-::foo
+foo::foo
 ```
 ```
-::foo+bar
+bar 10::foo+bar
 ```
 ```
-::baz0-foo*$%
+bar(10, "hello")::baz0-foo*$%
 ```
