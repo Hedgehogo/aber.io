@@ -17,7 +17,7 @@ Example:
 
 ## Literals
 ### Numbers
-Digits (0-9) and capital letters of the English alphabet (A-Z) can be used, if they exist in the required number system. `_` can be used as a separator between digits. Signed numbers can begin with `-`. The default numbering system is decimal. 
+Digits (`0` - `9`) and capital letters of the English alphabet (`A` - `Z`) can be used, if they exist in the required number system. `_` can be used as a separator between digits. Signed numbers can begin with `-`. The default numbering system is decimal. 
 
 **Integer numbers**
 
@@ -166,7 +166,7 @@ Examples:
 ```
 
 ## Function call
-Any non-zero character set that does not start with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or `-` with one of the characters in that set and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` is considered a function call.
+Any non-zero character set that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` is considered a function call.
 
 Examples:
 ```
