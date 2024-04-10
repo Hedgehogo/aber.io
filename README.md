@@ -1,8 +1,8 @@
 # Description
-Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elexir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing. 
+Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing. 
 
 # Syntax
-The character is referred to as the Unicode grapheme cluster.
+"A character" refers to Unicode grapheme cluster.
 
 ## Whitespace
 ` `, ⇥ (Tab) and ↵ (Newline) are considered whitespace characters.
@@ -56,22 +56,10 @@ Examples:
 2'01100101 // Binary, integer, 101 in decimal
 ```
 ```rs
-3'0.1 // Trinary, real, 1/3 in decimal
+3'0.1 // Trinary, floating point, 1/3 in decimal
 ```
 ```rs
-2'10. // Binary, real, 2 in decimal
-```
-
-**Scientific notation.**
-
-A number can be followed by an `e` followed by a full *integer number* (can be written in different number systems, etc.). This number is an exponent.
-
-Examples:
-```rs
-1e16'F // 1 * (10^15) in decimal
-```
-```rs
-9.109_383_56e−31 // 9.10938356 * (10^−31) in decimal
+2'10. // Binary, floating point, 2 in decimal
 ```
 
 ## Function call
