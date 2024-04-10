@@ -69,6 +69,7 @@ It is written in `"`. Characters are escaped with `\`. The characters supported 
 | The symbol after `\` | The result   |
 |----------------------|--------------|
 | `"`                  | `"`          |
+| `#`                  | `#`          |
 | `\`                  | `\`          |
 | `n`                  | ↵ (Newline)  |
 | `t`                  | ⇥ (Tab)      |
@@ -78,19 +79,33 @@ Any characters are allowed, except `"` without `\` before it, including ↵ (New
 
 Examples:
 ```rs
-"Hello\t\n\"IEML\"!" // Hello
-                     // "IEML"!
+"Hello\t\n\"Aber\"!" // Hello	
+                     // "Aber"!
 ```
 ```rs
 "Hello\t
-\"IEML\"!" // Same as the first one
+\"Aber\"!" // Same as the first one
 ```
 ```rs
 "Hello\t\
-\n\"IEML\"!" // Same as the first one
+\n\"Aber\"!" // Same as the first one
 ```
 
 **Raw string**
+Starts with a non-zero n number of `"` characters and a `#` character at the end. ends with `#` and n `"` characters.
+
+Examples:
+```
+"#Hello	
+"Aber"!#" // Same as in normal strings
+```
+```
+"""#	Aber#""" // "\tAber"
+```
+```
+ """Aber"""  // "" "Aber" ""
+"""#Aber#""" // "Aber"
+```
 
 ## Expression
 An expression is a set of syntactic units separated by whitespace.
