@@ -8,7 +8,6 @@ Aber is a high-level programming language inspired by languages such as Rust, Li
 ` `, ⇥ (Tab) and ↵ (Newline) are considered whitespace characters.
 
 ## Comments
-
 The comment begins with `//` and ends at the end of the line.
 
 Example:
@@ -92,8 +91,22 @@ Examples:
 
 **Raw string**
 
+## Expression
+An expression is a set of syntactic units separated by whitespace.
+
+Examples:
+```rs
+
+```
+```rs
+"hello"
+```
+```rs
+10 "hello" 15.4
+```
+
 ## Pair
-The pair is denoted by `:`. It captures the smallest syntactic unit in front of it.
+The pair is denoted by `:`. It captures one syntactic unit in front of it.
 
 Example:
 ```rs
@@ -166,7 +179,7 @@ baz0-foo*$%
 ```
 
 ## Method call
-A method call is indicated by `.` followed by a function call. It captures the largest set of syntactic units in front of it.
+A method call is indicated by `.` followed by a function call. It captures the largest expression in front of it.
 
 Examples:
 ```
@@ -180,7 +193,7 @@ bar(10, "hello").baz0-foo*$%
 ```
 
 ## Сhild function call
-A сhild function call is indicated by `::` followed by a function call. It captures the largest set of syntactic units in front of it.
+A сhild function call is indicated by `::` followed by a function call. It captures the largest expression in front of it.
 
 Examples:
 ```
