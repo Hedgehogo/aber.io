@@ -85,7 +85,7 @@ Examples:
 \"IEML\"!" // Same as the first one
 ```
 ```rs
-"Hello\
+"Hello\t\
 \n\"IEML\"!" // Same as the first one
 ```
 
