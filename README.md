@@ -208,7 +208,7 @@ baz(10, "hello")::baz0-foo*$%
 ```
 
 ## Assignment
-The assignment is denoted by `=`. It captures the right and left most expression. It has a lower priority than method calls and child function calls
+The assignment is denoted by `=`. It captures the right and left most expression. It has a higher priority than method calls and child function calls.
 
 Examples:
 ```
