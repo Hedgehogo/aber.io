@@ -62,8 +62,36 @@ Examples:
 2'10. // Binary, floating point, 2 in decimal
 ```
 
+### Strings
+
+**String**
+
+It is written in `"`. Characters are escaped with `\`. The characters supported for escaping: 
+| The symbol after `\` | The result   |
+|----------------------|--------------|
+| `"`                  | `"`          |
+| `\`                  | `\`          |
+| `n`                  | ↵ (Newline)  |
+| `t`                  | ⇥ (Tab)      |
+| ↵ (Newline)          | (Nothing)    |
+
+Any characters are allowed, except `"` without `\` before it, including ↵ (Newline).
+
+Examples:
+```rs
+"Hello\t\n\"IEML\"!" // Hello{Newline}"IEML"!
+```
+```rs
+	"Hello\t
+\"IEML\"!" // Same as the first one
+```
+```rs
+	"Hello\
+\n\"IEML\"!" // Same as the first one
+```
+
 ## Function call
-Any non-zero character set other than whitespace and `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` are considered function calls. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or with the same character set preceded by `-`.
+Any non-zero character set other than whitespace and `.`, `,`, `;`, `:`, `'`, `"`, `=`, `/`, `(`, `)`, `{`, `}`, `[`, `]` are considered function calls. Also not beginning with `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` or from any character in this set preceded by `-`.
 
 Examples:
 ```
