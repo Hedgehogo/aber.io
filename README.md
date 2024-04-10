@@ -100,7 +100,7 @@ Examples:
 "Aber"!#" // Same as in normal strings
 ```
 ```
-"""#	Aber#""" // "\tAber"
+"""#	""Aber#""" // "\t\"\"Aber"
 ```
 ```
  """Aber"""  // "" "Aber" ""
