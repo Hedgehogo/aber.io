@@ -81,11 +81,11 @@ Examples:
 "Hello\t\n\"IEML\"!" // Hello{Newline}"IEML"!
 ```
 ```rs
-	"Hello\t
+"Hello\t
 \"IEML\"!" // Same as the first one
 ```
 ```rs
-	"Hello\
+"Hello\
 \n\"IEML\"!" // Same as the first one
 ```
 
