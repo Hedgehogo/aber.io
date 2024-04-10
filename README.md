@@ -126,7 +126,7 @@ The pair is denoted by `:`. It captures one syntactic unit on the left.
 
 Example:
 ```rs
-"count": 10
+"count": 
 ```
 
 ## Tuple
