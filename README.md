@@ -5,7 +5,7 @@ Aber is a high-level programming language inspired by languages such as Rust, Li
 "A character" refers to Unicode grapheme cluster.
 
 ## Whitespace
-` `, ⇥ (Tab) and ↵ (Newline) are considered whitespace characters.
+` `, ⇥ (Tab) and ↵ (Newline) are considered whitespace characters. Whitespace can be empty.
 
 ## Comments
 The comment begins with `//` and ends at the end of the line.
