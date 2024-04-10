@@ -107,7 +107,7 @@ Examples:
 ```
 
 ## Pair
-The pair is denoted by `:`. It captures one syntactic unit in front of it.
+The pair is denoted by `:`. It captures one syntactic unit on the left.
 
 Example:
 ```rs
@@ -180,7 +180,7 @@ baz0-foo*$%
 ```
 
 ## Method call
-A method call is indicated by `.` followed by a function call. It captures the largest expression in front of it.
+A method call is indicated by `.` followed by a function call. It captures the largest expression on the left.
 
 Examples:
 ```
@@ -194,7 +194,7 @@ baz(10, "hello").baz0-foo*$%
 ```
 
 ## Сhild function call
-A сhild function call is indicated by `::` followed by a function call. It captures the largest expression in front of it.
+A сhild function call is indicated by `::` followed by a function call. It captures the largest expression on the left.
 
 Examples:
 ```
@@ -207,8 +207,22 @@ bar 10::foo+bar
 baz(10, "hello")::baz0-foo*$%
 ```
 
+## Negative function call
+The negative function call is denoted by `@`. It captures the largest expression on the right. It has higher precedence than a method call or a child function call.
+
+Examples:
+```
+a = foo
+```
+```
+a = foo.foo
+```
+```
+a = foo::foo
+```
+
 ## Assignment
-The assignment is denoted by `=`. It captures the largest expression to the right and left. It has a higher priority than method calls and child function calls.
+The assignment is denoted by `=`. It captures the largest expression to the right and left. It has higher priority than a method call, a child function call, or a negative function call.
 
 Examples:
 ```
