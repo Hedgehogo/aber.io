@@ -180,8 +180,8 @@ Examples:
 [5, Type]
 ```
 
-## Сall
-Any non-zero character set, that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `/`, `(`, `)`, `{`, `}`, `[`, `]` and whitespace, is considered a call.
+## Identifier
+Any non-zero character set, that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `/`, `(`, `)`, `{`, `}`, `[`, `]` and whitespace, is considered a identifier. 
 
 Examples:
 ```
@@ -192,6 +192,17 @@ foo+bar
 ```
 ```
 baz0-foo*$%
+```
+
+## Сall
+The call is considered to be an identifier, with explicit generic parameters optionally to the right of it.
+
+Examples:
+```
+foo
+```
+```
+foo+bar[10]
 ```
 
 ## Method call
