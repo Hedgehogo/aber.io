@@ -2,7 +2,7 @@
 Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing. 
 
 # Syntax
-"A character" refers to Unicode grapheme cluster.
+"Character" refers to Unicode grapheme cluster.
 
 ## Whitespace
 ` `, ⇥ (Tab) and ↵ (Newline) are considered whitespace characters. Whitespace can be empty.
