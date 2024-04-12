@@ -61,6 +61,14 @@ Examples:
 2'10. // Binary, floating point, 2 in decimal
 ```
 
+### Chars
+Chars begin and end with `'`. There must be either an escape sequence or a single character between them. All escape sequences begin with `\` and are described in the following table:
+| The symbol after `\` | The result   |
+|----------------------|--------------|
+| `\`                  | `\`          |
+| `n`                  | ↵ (Newline)  |
+| `t`                  | ⇥ (Tab)      |
+
 ### Strings
 
 **String**
