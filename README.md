@@ -268,3 +268,25 @@ a = foo.foo
 ```
 @bar = foo::foo
 ```
+
+# Semantics
+## Functions
+Functions are divided into signature and implementation. The function signature consists of a ordered named set of arguments, a ordered named set of parameters and the type of the value to be returned.
+
+An argument is an identifier + type pair. The number of function arguments is always fixed.
+
+A parameter is an identifier + constraint pair that can be derived from an argument. The number of parameters is always fixed.
+
+You must use the call syntax to call the function. Parameters can be passed in via the explicit parameter generic syntax in the same order as in the signature. The last parameters can be omitted. If no parameters are passed in, the explicit generic parameter syntax may be omitted. The function syntax is followed by a list of objects separated by whitespace syntax corresponding in type to its arguments in the same order as the arguments in the signature. 
+
+If a call occurs in the argument list, it first captures its arguments, and then the external function captures its arguments next.
+
+```rs
+max 10 15 //15
+```
+```rs
+max min 2 4 3 //3
+```
+```rs
+parse[I32] "10" //10
+```
