@@ -2,6 +2,7 @@
 Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing.
 # Examples
 **Hello World**
+
 Contents of the file `hello_world.aber`:
 ```aber
 std::use_prelude;
@@ -17,6 +18,7 @@ Output:
 Hello World!
 ```
 **Fibonacci**
+
 Contents of the file `fibonacci.aber`:
 ```aber
 std::use_prelude;
@@ -39,6 +41,7 @@ Output:
 result: 21
 ```
 **Unit testing**
+
 Contents of the file `unit_testing.aber`:
 ```aber
 std::use_prelude;
