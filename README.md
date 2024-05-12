@@ -22,10 +22,10 @@ Contents of the file `fibonacci.aber`:
 std::use_prelude;
 
 fn fibonacci(n) {
-    if n.< 2 {
-        return n;
-    }
-    fibonacci(n.- 1).+ fibonacci(n.- 2)
+	if n.< 2 {
+		return n;
+	}
+	fibonacci(n.- 1).+ fibonacci(n.- 2)
 };
 
 print "result: {}" (run fibonacci(9));
