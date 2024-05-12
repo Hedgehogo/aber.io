@@ -1,292 +1,77 @@
 # Description
-Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing. 
+Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing.
+# Examples
+**Hello World**
+Contents of the file `hello_world.aber`:
+```aber
+std::use_prelude;
 
-# Syntax
-"Character" refers to Unicode grapheme cluster.
+print run() "Hello World!" ();
+```
+Сompiler command:
+```
+aberc --script hello_world.aber
+```
+Output:
+```
+Hello World!
+```
+**Fibonacci**
+Contents of the file `fibonacci.aber`:
+```aber
+std::use_prelude;
 
-## Whitespace
-` `, ⇥ (Tab) and ↵ (Newline) are considered whitespace characters. Whitespace can be empty.
+fn fibonacci(n) {
+    if n.< 2 {
+        return n;
+    }
+    fibonacci(n.- 1).+ fibonacci(n.- 2)
+};
 
-## Comments
-The comment begins with `//` and ends at the end of the line.
+print "result: {}" (run fibonacci(9));
+```
+Сompiler command:
+```
+aberc --script fibonacci.aber
+```
+Output:
+```
+result: 21
+```
+**Unit testing**
+Contents of the file `unit_testing.aber`:
+```aber
+std::use_prelude;
 
-Example:
-```rs
-// At the beginning of the line
-```
+fn foo(n) { n.+ 1 };
 
-## Literals
-### Numbers
-Digits (`0` - `9`) and capital letters of the English alphabet (`A` - `Z`) can be used, if they exist in the required number system. `_` can be used as a separator between digits. Signed numbers can begin with `-`. The default numbering system is decimal. 
+fn (test) test() {
+	assert_eq(foo(1), 1).?;
+};
 
-**Integer numbers**
-
-Example:
-```rs
-3_005 // 3005 in decimal
+fn main() {
+	print "result: {}" (run foo(1));
+};
 ```
-
-**Floating point numbers**
-
-`.` is used as a separator between the integer part and the fractional part. The integer part is required to have at least one digit.
-
-Examples:
-```rs
-1.15
+Сompiler command:
 ```
-```rs
-23.
+aberc --run unit_testing.aber
 ```
-```rs
-.1 // Error
+Output:
 ```
-
-The functional further works for any numbers. 
-
-**Specifying the number system.**
-
-Before the number is written the number system in decimal notation, and then it is written `'`.
-
-Examples:
-```rs
-16'FF // Hexadecimal, integer, 255 in decimal
+result: 2
 ```
-```rs
-2'01100101 // Binary, integer, 101 in decimal
+Сompiler command:
 ```
-```rs
-3'0.1 // Trinary, floating point, 1/3 in decimal
+aberc --test unit_testing.aber
 ```
-```rs
-2'10. // Binary, floating point, 2 in decimal
+Output:
 ```
-
-### Chars
-Chars begin and end with `'`. There must be either an escape sequence or a single character between them. All escape sequences begin with `\` and are described in the following table:
-| The symbol after `\` | The result   |
-|----------------------|--------------|
-| `\`                  | `\`          |
-| `n`                  | ↵ (Newline)  |
-| `t`                  | ⇥ (Tab)      |
-
-### Strings
-
-**String**
-
-It is written in `"`. Characters are escaped with `\`. The characters supported for escaping: 
-| The symbol after `\` | The result   |
-|----------------------|--------------|
-| `"`                  | `"`          |
-| `#`                  | `#`          |
-| `\`                  | `\`          |
-| `n`                  | ↵ (Newline)  |
-| `t`                  | ⇥ (Tab)      |
-| ↵ (Newline)          | (Nothing)    |
-
-Any characters are allowed, except `"` without `\` before it, including ↵ (Newline).
-
-Examples:
-```kotlin
-"Hello\t\n\"Aber\"!" // Hello	
-                     // "Aber"!
+The crate::test failed at ./unit_testing.aber:5:1:
+    assert_eq(foo(1), 1).?;
+left: 2
+right: 1
 ```
-```kotlin
-"Hello\t
-\"Aber\"!" // Same as the first one
-```
-```kotlin
-"Hello\t\
-\n\"Aber\"!" // Same as the first one
-```
-
-**Raw string**
-Starts with a non-zero n number of `"` characters and a `#` character at the end. ends with `#` and n `"` characters.
-
-Examples:
-```dart
-"#Hello	
-"Aber"!#" // Same as in normal strings
-```
-```kotlin
-"""#	""Aber#""" // "\t\"\"Aber"
-```
-```kotlin
- """Aber"""  // "" "Aber" ""
-"""#Aber#""" // "Aber"
-```
-
-## Expression
-An expression is a set of syntactic units separated by whitespace.
-
-Examples:
-```rs
-
-```
-```rs
-"hello"
-```
-```rs
-10 "hello" 15.4
-```
-
-## Pair
-The pair is denoted by `:`. It captures one syntactic unit on the left.
-
-Example:
-```rs
-"count": 
-```
-
-## Tuple
-Tuples start with `(` and end with `)`, elements within are separated by `,`. A comma before a closing bracket is optional.
-
-Examples:
-```rs
-() 
-```
-```rs
-(10)
-```
-```rs
-(42, )
-```
-```rs
-(5, "hello")
-```
-
-## Block
-Blocks start with `{` and end with `}`, expressions within are separated by `;`. A semicolon before a closing bracket creates an empty expression at the end of the block.
-
-Examples:
-```rs
-{}
-```
-```rs
-{10}
-```
-```rs
-{42; }
-```
-```rs
-{5; "hello"}
-```
-
-## Explicit generic parameters
-Explicit generic parameters start with `[` and end with `]`, parameters within are separated by `,`. A comma before a closing bracket is optional.
-
-Examples:
-```rs
-[]
-```
-```rs
-[10]
-```
-```rs
-[42, ]
-```
-```rs
-[5, Type]
-```
-
-## Identifier
-Any non-zero character set, that does not start with digit (`0` - `9`) or `-` with one digit and does not include `.`, `,`, `;`, `:`, `'`, `"`, `=`, `@`, `//`, `(`, `)`, `{`, `}`, `[`, `]` and whitespace, is considered a identifier. 
-
-Examples:
-```
-foo
-```
-```
-foo+bar
-```
-```
-baz0-foo*$%
-```
-
-## Сall
-The call is considered to be an identifier, with explicit generic parameters optionally to the right of it.
-
-Examples:
-```
-foo
-```
-```
-foo+bar[10]
-```
-
-## Method call
-A method call is indicated by `.` followed by a call. It captures the largest expression on the left.
-
-Examples:
-```
-foo.foo
-```
-```
-bar 10.foo+bar
-```
-```
-baz(10, "hello").baz0-foo*$%
-```
-
-## Сhild сall
-A сhild call is indicated by `::` followed by a call. It captures the largest expression on the left.
-
-Examples:
-```
-foo::foo
-```
-```
-bar 10::foo+bar
-```
-```
-baz(10, "hello")::baz0-foo*$%
-```
-
-## Negative call
-The negative call is denoted by `@`. It captures the largest expression on the right. It has higher precedence than a method call or a child call.
-
-Examples:
-```
-@foo
-```
-```
-@foo.foo
-```
-```
-@foo::foo
-```
-
-## Assignment
-The assignment is denoted by `=`. It captures the largest expression to the right and left. It has higher priority than a method call, a child call, or a negative call.
-
-Examples:
-```
-a = foo
-```
-```
-a = foo.foo
-```
-```
-@bar = foo::foo
-```
-
-# Semantics
-## Functions
-Functions are divided into signature and implementation. The function signature consists of a ordered named set of arguments, a ordered named set of parameters and the type of the value to be returned.
-
-An argument is an identifier + type pair. The number of function arguments is always fixed.
-
-A parameter is an identifier + constraint pair that can be derived from an argument. The number of parameters is always fixed.
-
-You must use the call syntax to call the function. Parameters can be passed in via the explicit parameter generic syntax in the same order as in the signature. The last parameters can be omitted. If no parameters are passed in, the explicit generic parameter syntax may be omitted. The function syntax is followed by a list of objects separated by whitespace syntax corresponding in type to its arguments in the same order as the arguments in the signature. 
-
-If a call occurs in the argument list, it first captures its arguments, and then the external function captures its arguments next.
-
-```rs
-max 10 15 //15
-```
-```rs
-max min 2 4 3 //3
-```
-```rs
-parse[I32] "10" //10
-```
+# Specification
+- [Syntax](./Syntax/_)
+- [Semantics](./Semantics/_)
