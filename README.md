@@ -73,5 +73,5 @@ left: 2
 right: 1
 ```
 # Specification
-- [Syntax](./Syntax/_)
-- [Semantics](./Semantics/_)
+- [Syntax](./Syntax/_.md)
+- [Semantics](./Semantics/_.md)
