@@ -2,7 +2,7 @@
 Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing.
 # Examples
 
-**Hello World**
+### Hello World
 
 Contents of the file `hello_world.aber`:
 ```aber
@@ -19,7 +19,7 @@ Output:
 Hello World!
 ```
 
-**Fibonacci**
+### Fibonacci
 
 Contents of the file `fibonacci.aber`:
 ```aber
@@ -43,7 +43,7 @@ Output:
 result: 21
 ```
 
-**Structures and unions**
+### Structures and unions
 
 Contents of the file `structures_unions.aber`:
 ```aber
@@ -77,7 +77,7 @@ x: 10, y: 15
 Some(23)
 ```
 
-**Traits**
+### Traits
 
 Contents of the file `traits.aber`:
 ```aber
@@ -96,7 +96,7 @@ impl Vec2 {
 
 impl(T) Operator(+)[Vec2[T]]: Vec2[T]
 where (
-	T: Operator(+)[T]
+	T: Operator(+)[T],
 ) {
 	fn Output() { Vec2[T::Output] }
 
@@ -116,7 +116,7 @@ Output:
 result: Vec2{ x: 52, y: 46 }
 ```
 
-**Unit testing**
+### Unit testing
 
 Contents of the file `unit_testing.aber`:
 ```aber
