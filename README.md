@@ -94,8 +94,11 @@ impl Vec2 {
 	}
 }
 
-impl(T) Operator(+)[Vec2[T]]: Vec2[T] {
-	fn Output() { Vec2[T] }
+impl(T) Operator(+)[Vec2[T]]: Vec2[T]
+where (
+	T: Operator(+)[T]
+) {
+	fn Output() { Vec2[T::Output] }
 
 	fn +(self: Self, other: Self) {
 		Self::new(self.x.+ other.x, self.y.+ other.y) 
