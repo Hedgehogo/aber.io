@@ -82,7 +82,7 @@ Some(23)
 Contents of the file `traits.aber`:
 ```aber
 std::use_prelude;
-use std::(derive, std::fmt::Debug, std::ops::Operator);
+use std::(traits::derive, fmt::Debug, ops::Operator);
 
 struct Vec2[T](x: T, y: T);
 
