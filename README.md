@@ -8,7 +8,7 @@ Contents of the file `hello_world.aber`:
 ```aber
 std::use_prelude;
 
-print run() "Hello World!" ();
+print "Hello World!" run();
 ```
 Сompiler command:
 ```
@@ -147,9 +147,9 @@ aberc --test unit_testing.aber
 Output:
 ```
 The crate::test failed at ./unit_testing.aber:5:1:
-    assert_eq(foo(1), 1).?;
-left: 2
-right: 1
+        assert_eq(foo(1), 1).?;
+    left: 2
+    right: 1
 ```
 # Specification
 - [Syntax](./Syntax/_.md)
