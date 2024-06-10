@@ -3,7 +3,7 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-white.png">
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-black.png">
     <img alt="The Aber Programming Language: A language that can be anything."
-         src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo.png"
+         src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-black.png"
          width="25%">
   </picture>
   
