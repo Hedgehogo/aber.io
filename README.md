@@ -1,3 +1,15 @@
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-black.png">
+    <img alt="The Aber Programming Language: A language that can be anything."
+         src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo.png"
+         width="50%">
+  </picture>
+<a href="./Syntax/_.md">Syntax</a> | <a href="./Semantics/_.md">Semantics</a>
+</div>
+![Aber's logo|128](_src/aber-logo.png) 
+
 # Description
 Aber is a high-level programming language inspired by languages such as Rust, Lisp, Elixir, and Zig. It includes high-level abstractions such as structures, unions and traits, compile-time computation and automatic generalization. But it also allows low-level memory access and platform-dependent code writing.
 # Examples
