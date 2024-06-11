@@ -1,9 +1,9 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-white.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-black.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-wide-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-wide-light.svg">
     <img alt="The Aber Programming Language: A language that can be anything."
-         src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-black.svg"
+         src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-wide-light.svg"
          width="25%">
   </picture>
   
