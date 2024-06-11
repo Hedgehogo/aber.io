@@ -1,0 +1,38 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+      }
+
+      .cls-4 {
+        fill: url(#Безымянный_градиент_66);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path class="cls-1" d="M-512-512V1536H1536V-512ZM-142.52,864,512,127.67,1166.52,864H946.86L512,677.63,77.14,864Z"/>
+    </clipPath>
+    <linearGradient id="Безымянный_градиент_66" data-name="Безымянный градиент 66" x1="512" y1="800" x2="512" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#25344a"/>
+      <stop offset="1" stop-color="#63bead"/>
+    </linearGradient>
+  </defs>
+  <title>aber-logo-black</title>
+  <g class="cls-2">
+    <path class="cls-3" d="M512,0C229.23,0,0,229.23,0,512s229.23,512,512,512,512-229.23,512-512S794.77,0,512,0Zm0,960C264.58,960,64,759.42,64,512S264.58,64,512,64,960,264.58,960,512,759.42,960,512,960Z"/>
+  </g>
+  <polygon class="cls-4" points="0 800 64 800 512 608 960 800 1024 800 512 224 0 800"/>
+  <polygon class="cls-3" points="0 800 64 800 512 608 960 800 1024 800 512 224 0 800"/>
+  <g>
+    <polygon class="cls-3" points="357.53 301.45 469.47 175.52 426.65 127.35 305.12 264.08 357.53 301.45"/>
+    <polygon class="cls-3" points="262.35 312.19 140.81 448.92 202.82 475.49 314.76 349.56 262.35 312.19"/>
+  </g>
+</svg>
