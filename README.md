@@ -4,7 +4,7 @@
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-wide-light.svg">
     <img alt="The Aber Programming Language: A language that can be anything."
          src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-wide-light.svg"
-         width="25%">
+         width="50%">
   </picture>
   
 <a href="./Syntax/_.md">Syntax</a> | <a href="./Semantics/_.md">Semantics</a>
