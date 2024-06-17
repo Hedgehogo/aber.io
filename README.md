@@ -7,7 +7,7 @@
          width="50%">
   </picture>
   
-<a href="./Syntax/_.md">Syntax</a> | <a href="./Semantics/_.md">Semantics</a>
+<a href="./Specification/_.md">Specification</a>
 </div>
 
 # Description
@@ -163,6 +163,5 @@ The crate::test failed at ./unit_testing.aber:5:1:
     left: 2
     right: 1
 ```
-# Specification
-- [Syntax](./Syntax/_.md)
-- [Semantics](./Semantics/_.md)
+# Sections
+- [Specification](./Specification/_.md)
