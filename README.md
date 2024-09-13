@@ -61,7 +61,7 @@ Contents of the file `structures_unions.aber`:
 ```aber
 std::use_prelude;
 
-struct Vec2[T](x: T, y: T);
+struct(T) Vec2(x: T, y: T);
 
 impl Vec2 {
 	fn new(x, y) {

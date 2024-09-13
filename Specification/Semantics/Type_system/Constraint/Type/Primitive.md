@@ -1,0 +1,17 @@
+A *primitive* is one of the [*types*](./_.md) listed below:
+- `std::core::primitive::I1`
+- `std::core::primitive::I2`
+- `std::core::primitive::I4`
+- `std::core::primitive::I8`
+- `std::core::primitive::I16`
+- `std::core::primitive::U1`
+- `std::core::primitive::U2`
+- `std::core::primitive::U4`
+- `std::core::primitive::U8`
+- `std::core::primitive::U16`
+- `std::core::primitive::F4`
+- `std::core::primitive::F8`
+- `std::core::primitive::ISize`
+- `std::core::primitive::USize`
+- `std::core::primitive::Array[T, N]`
+- `std::core::primitive::Tuple[T]`
