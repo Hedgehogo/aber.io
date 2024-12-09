@@ -14,4 +14,5 @@ A *primitive* is one of the [*types*](./_.md) listed below:
 - `std::core::primitive::ISize`
 - `std::core::primitive::USize`
 - `std::core::primitive::Array[T, N]`
-- `std::core::primitive::Tuple[T]`
+- `std::core::primitive::Cons[T, R]`
+- `std::core::primitive::Nil`
