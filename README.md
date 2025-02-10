@@ -65,18 +65,18 @@ struct(T) Vec2(x: T, y: T);
 
 impl Vec2 {
 	fn new(x, y) {
-		Self::construct(x, y)
+		Self::(x, y)
 	}
 }
 
-union Option(None(), Some(_));
+union Option(None::(), Some::(_));
 
 let vec2(run Vec2::new(10, 15));
 println "x: {}, y: {}" (vec2.x, vec2.y);
 
-let option(Option::Some(23));
+let option(Option::Some::(23));
 option.match(
-	Option::Some(i): println "Some({})" (i)
+	Option::Some::(i): println "Some::({})" (i)
 );
 ```
 Сompiler command:
@@ -102,13 +102,13 @@ derive(Vec2, Debug);
 
 impl Vec2 {
 	fn new(x, y) {
-		Self::constuct(x, y)
+		Self::(x, y)
 	}
 }
 
-impl(T) Operator(+)[Vec2[T]]: Vec2[T]
+impl(T) Operator+[Vec2[T]]: Vec2[T]
 where (
-	T: Operator(+)[T],
+	T: Operator+[T],
 ) {
 	fn Output() { Vec2[T::Output] }
 
@@ -125,7 +125,7 @@ aberc --script traits.aber
 ```
 Output:
 ```
-result: Vec2{ x: 52, y: 46 }
+result: Vec2(x: 52, y: 46)
 ```
 
 ### Unit testing
@@ -136,7 +136,7 @@ std::use_prelude;
 
 fn foo(n) { n.+ 1 };
 
-fn (test) test() {
+testing fn test() {
 	assert_eq(foo(1), 1).?;
 };
 
