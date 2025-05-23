@@ -1,0 +1,1 @@
+*User input* is a string or set of strings. Each string is referred to as a *document*. Each string must be a valid sequence of Unicode grapheme clusters. It is up to the tool (compiler, formatter, analyzer, etc.) to decide what to do with invalid sequences. There is no additional specification of the structure of these strings, but most often they are text files. 

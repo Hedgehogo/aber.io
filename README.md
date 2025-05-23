@@ -96,7 +96,7 @@ Contents of the file `traits.aber`:
 std::use_prelude;
 use std::(traits::derive, fmt::Debug, ops::Operator);
 
-struct Vec2[T](x: T, y: T);
+struct(T) Vec2(x: T, y: T);
 
 derive(Vec2, Debug);
 

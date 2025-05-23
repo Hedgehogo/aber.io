@@ -1,0 +1,1 @@
+Converting [*user input*](./../../Representation/User_input.md) to [*WAST*](./../../Representation/Wast.md) is described in the [*Syntax*](./../../Syntax/_.md) section.
