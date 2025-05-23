@@ -1,1 +1,0 @@
-A *union* is a [*type*](./_.md) whose [*objects*](./../../Object/_.md) contain an [*object*](./../../Object/_.md) of one of the [*types*](./_.md) of a finite set. This set is defined for each *union* separately.

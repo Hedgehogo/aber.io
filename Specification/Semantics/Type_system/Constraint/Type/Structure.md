@@ -1,1 +1,0 @@
-A *structure* is a *type* whose [*objects*](./../../Object/_.md) contain several other [*objects*](./../../Object/_.md) in an ordered manner.
