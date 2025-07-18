@@ -1,1 +1,1 @@
-A *structure* is a *type* whose [*objects*](Specification/Compilation/Type_system/Object/_.md) contain several other [*objects*](Specification/Compilation/Type_system/Object/_.md) in an ordered manner.
+A *structure* is a *type* whose [*objects*](./../../Object/_.md) contain several other [*objects*](./../../Object/_.md) in an ordered manner.

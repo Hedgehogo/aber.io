@@ -1,4 +1,4 @@
-A *primitive* is one of the [*types*](Specification/Compilation/Type_system/Constraint/Type/_.md) listed below:
+A *primitive* is one of the [*types*](./_.md) listed below:
 - `std::core::primitive::I1`
 - `std::core::primitive::I2`
 - `std::core::primitive::I4`
