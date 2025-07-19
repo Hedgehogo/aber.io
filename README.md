@@ -6,8 +6,10 @@
          src="https://github.com/Hedgehogo/aber.io/blob/main/_src/aber-logo-wide-light.svg"
          width="50%">
   </picture>
-  
-<a href="./Specification/_.md">Specification</a>
+
+<a href="./Language/_.md">Language</a>
+<a href="./Formatting/_.md">Formatting</a>
+<a href="./Tools/_.md">Tools</a>
 </div>
 
 # Description
@@ -164,4 +166,4 @@ The crate::test failed at ./unit_testing.aber:5:1:
     right: 1
 ```
 # Sections
-- [Specification](./Specification/_.md)
+- [Specification](Language/_.md)

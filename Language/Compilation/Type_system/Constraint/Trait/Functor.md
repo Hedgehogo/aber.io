@@ -1,6 +1,6 @@
 A *functor* is an [*object*](./../../Object/_.md) whose [*type*](./../Type/_.md) implements the [*trait*](./_.md) `std::core::trait::Call`.
 
-Referring to a *functor* is treated as a *call*. The *call* is divided into *arguments* and *return value*. 
+Referring to a *functor* is treated as a *call*. The *call* is divided into *arguments* and *return value*.
 
 Each *argument* is an [*object*](./../../Object/_.md). For one [*type*](./../Type/_.md) of *functor*, the number, order and [*types*](./../Type/_.md) of *arguments* are fixed. The *return value* is an [*object*](./../../Object/_.md). For each [*type*](./../Type/_.md) of *functor* the [*type*](./../Type/_.md) of *return value* is fixed.
 
@@ -9,8 +9,8 @@ Syntactically, a *call* must be followed by its *arguments*, separated by [*whit
 Example:
 > Suppose we already have a *functor* that can be accessed by writing `max`.
 > Also assume that its *arguments* can be *number literals*, and its *return value* can be a number.
-> 
-> Then the given expression: 
+>
+> Then the given expression:
 > ```aber
 > max 10 15
 > ```
