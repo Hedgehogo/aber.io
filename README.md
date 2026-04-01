@@ -22,7 +22,7 @@ Contents of the file `hello_world.aber`:
 ```aber
 std::use_prelude;
 
-print "Hello World!" run();
+print("Hello World!", run nodisplay());
 ```
 Сompiler command:
 ```
@@ -46,7 +46,7 @@ fn fibonacci(n) {
 	fibonacci(n.- 1).+ fibonacci(n.- 2)
 };
 
-print "result: {}" (run fibonacci(9));
+print("result: ", run fibonacci(9));
 ```
 Сompiler command:
 ```
@@ -63,22 +63,22 @@ Contents of the file `structures_unions.aber`:
 ```aber
 std::use_prelude;
 
-struct(T) Vec2(x: T, y: T);
+struct @[T] Vec2(x: T, y: T);
 
 impl Vec2 {
 	fn new(x, y) {
 		Self::(x, y)
 	}
-}
+};
 
 union Option(None::(), Some::(_));
 
 let vec2(run Vec2::new(10, 15));
-println "x: {}, y: {}" (vec2.x, vec2.y);
+println("x: ", vec2.x, ", y: ", vec2.y);
 
 let option(Option::Some::(23));
 option.match(
-	Option::Some::(i): println "Some::({})" (i)
+	Option::Some::(i): println("Some::(", i, ")")
 );
 ```
 Сompiler command:
@@ -98,28 +98,28 @@ Contents of the file `traits.aber`:
 std::use_prelude;
 use std::(traits::derive, fmt::Debug, ops::Operator);
 
-struct(T) Vec2(x: T, y: T);
+struct @[T] Vec2(x: T, y: T);
 
-derive(Vec2, Debug);
+derive(@[T] Vec2[T], Debug);
 
 impl Vec2 {
 	fn new(x, y) {
 		Self::(x, y)
 	}
-}
+};
 
-impl(T) Operator+[Vec2[T]]: Vec2[T]
-where (
-	T: Operator+[T],
-) {
-	fn Output() { Vec2[T::Output] }
+impl 
+	@[T]::(T: Operator+[T])
+	Operator+[Vec2[T]]: Vec2[T]
+{
+	let Output(Vec2[T::Output]);
 
 	fn +(self: Self, other: Self) {
 		Self::new(self.x.+ other.x, self.y.+ other.y) 
-	}
-}
+	};
+};
 
-println "result: {:?}" (run { Vec2::new(10, 15).+ Vec2::new(42, 31) });
+println("result: ", debug run { Vec2::new(10, 15).+ Vec2::new(42, 31) });
 ```
 Сompiler command:
 ```
@@ -143,7 +143,7 @@ testing fn test() {
 };
 
 fn main() {
-	print "result: {}" (run foo(1));
+	print("result: ", run foo(1));
 };
 ```
 Сompiler command:
@@ -160,7 +160,7 @@ aberc --test unit_testing.aber
 ```
 Output:
 ```
-The crate::test failed at ./unit_testing.aber:5:1:
+The ''::test failed at ./unit_testing.aber:5:1:
         assert_eq(foo(1), 1).?;
     left: 2
     right: 1

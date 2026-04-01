@@ -9,7 +9,7 @@ An assignment contains 2 *expressions*.
 
 An *identifier* is a sequence of grapheme clusters satisfying the requirements of the *identifier syntax*. 
 
-A *list of generic arguments* contain a sequence of *expressions*.
+A *list of generic lists* contain a sequence of *expressions*.
 
 ## Existing nodes and their contents
 
@@ -21,7 +21,7 @@ A *list of generic arguments* contain a sequence of *expressions*.
 | *Pair*           | One other node.                                                                                                                                                                         |
 | *Tuple*          | A sequence of *expressions*.                                                                                                                                                            |
 | *Block*          | A sequence of *statements* and one *expression*.                                                                                                                                        |
-| *Call*           | An *identifier* and a *list of generic arguments*.                                                                                                                                      |
+| *Call*           | An *identifier* and a *list of generic lists*.                                                                                                                                          |
 | *Method call*    | An *expression* and a *call* node.                                                                                                                                                      |
 | *Child call*     | An *expression* and a *call* node.                                                                                                                                                      |
 | *Negative call*  | An expression.                                                                                                                                                                          |
