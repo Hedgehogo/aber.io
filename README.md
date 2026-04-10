@@ -63,7 +63,7 @@ Contents of the file `structures_unions.aber`:
 ```aber
 std::use_prelude;
 
-struct @[T] Vec2(x: T, y: T);
+struct Vec2[T](x: T, y: T);
 
 impl Vec2 {
 	fn new(x, y) {
@@ -98,7 +98,7 @@ Contents of the file `traits.aber`:
 std::use_prelude;
 use std::(traits::derive, fmt::Debug, ops::Operator);
 
-struct @[T] Vec2(x: T, y: T);
+struct Vec2[T](x: T, y: T);
 
 derive(@[T] Vec2[T], Debug);
 
